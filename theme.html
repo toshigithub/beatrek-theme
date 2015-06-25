@@ -66,8 +66,9 @@
 {block:AskEnabled}<li><a title="Contact" href="/ask">contact</a></li>{/block:AskEnabled}
 {block:SubmissionsEnabled}<li><a title="{SubmitLabel}" href="/submit">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
 {block:HasPages}{block:Pages}<li><a title="{Label}" href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}
-<li><a href="/archive" title="{lang:Archive}">{lang:Archive}</a></li>
-<li><a href="{RSS}" title="{lang:RSS}">Feeds</a></li>
+<li><a href="#" title="Events">Events</a>
+<li><a href="#" title="Concept">Concept</a>
+<li><a href="/archive" title="{lang:Archive}">Archive</a></li>
 <li><div class="search" style="display:none;"><form id="searchform" action="/search" method="get"><input id="sbmt" type="submit" value="search"><input title="Search" id="s" name="q" placeholder="SEARCH" type="{lang:search}" value="{SearchQuery}"></form></div></li>
 </ul>
 </div>
