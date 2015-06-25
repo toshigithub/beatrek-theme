@@ -99,6 +99,7 @@
 {/block:IfHeroImage}
 
 
+{block:TagPage}
 {block:Posts}
 <div class="post{block:Photo} photo{/block:Photo}{block:Photoset} photo{/block:Photoset}" id="{Postid}">{block:Text}<div class="text">{/block:Text}{block:Link}<div class="text">{/block:Link}{block:Quote}<div class="text">{/block:Quote}{block:Chat}<div class="text">{/block:Chat}{block:Answer}<div class="text">{/block:Answer}{block:Video}<div class="text">{/block:Video}{block:Audio}<div class="text">{/block:Audio}
 {block:Text}{block:Title}<a title="{lang:Permalink}" href="{Permalink}">{Title}</a>{/block:Title}<div class="description">{Body}</div>{/block:Text}
@@ -142,16 +143,20 @@
 {block:IndexPage}{block:IfShowCaptions}{block:Caption}<div class="{block:Photo}{block:IfNotPhotoIcons}gap {/block:IfNotPhotoIcons}{block:IfPhotoIcons}pad {/block:IfPhotoIcons}{/block:Photo}{block:Photoset}{block:IfPhotoIcons}pad {/block:IfPhotoIcons}{block:IfNotPhotoIcons}gap {/block:IfNotPhotoIcons}{/block:Photoset}caption">{Caption}</div>{/block:Caption}{/block:IfShowCaptions}<div class="permalink {block:IfNotPhotoIcons}{block:Photo}gap clear {block:Photo}{block:Photoset}gap clear {/block:Photoset}{/block:IfNotPhotoIcons}{block:IfPhotoIcons}{block:Photo} none{/block:Photo}{block:Photoset} none{/block:Photoset}{/block:IfPhotoIcons}" {block:IfNotPhotoIcons}{block:Photo}style="padding-bottom: 50px!important;"{block:Photo}{block:Photoset}style="padding-bottom: 50px!important;"{/block:Photoset}{/block:IfNotPhotoIcons}><div class="icon">{block:IfPostIconsWhite}{LikeButton color="white" size="20"}{/block:IfPostIconsWhite}{block:IfNotPostIconsWhite}{LikeButton color="black" size="20"}{/block:IfNotPostIconsWhite}</div><div class="icon">{block:IfPostIconsWhite}{ReblogButton color="white" size="20"}{/block:IfPostIconsWhite}{block:IfNotPostIconsWhite}{ReblogButton color="black" size="20"}{/block:IfNotPostIconsWhite}</div><div class="perma"><a title="{lang:Permalink}" href="{Permalink}">Details</a><span style="width:80px;"><a href="http://twitter.com/intent/tweet?url={URLEncodedShortURL}" class="icon-twitter" target="_blank"></a> <a href="https://www.facebook.com/dialog/feed?app_id=221438161314294&link={URLEncodedPermalink}&redirect_uri={URLEncodedPermalink}" class="icon-facebook" target="_blank"></a> <a href="https://plus.google.com/share?url={URLEncodedShortURL}" class="icon-gplus" target="_blank"></a> {block:Photoset}<a href="https://pinterest.com/pin/create/button/?url={URLEncodedShortURL}{block:Photos}&media={PhotoURL-HighRes}{/block:Photos}" class="icon-pinterest" target="_blank"></a>{/block:Photoset}{block:Photo}<a href="https://pinterest.com/pin/create/button/?url={URLEncodedShortURL}&media={URLEncodedPhotoURL-HighRes}" class="icon-pinterest" target="_blank"></a>{/block:Photo}</span></div></div>{/block:IndexPage}
 </div>
 {block:Text}</div>{/block:Text}{block:Link}</div>{/block:Link}{block:Quote}</div>{/block:Quote}{block:Chat}</div>{/block:Chat}{block:Answer}</div>{/block:Answer}{block:Video}</div>{/block:Video}{block:Audio}</div>{/block:Audio}
-{block:PermalinkPage}{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}{block:Date}<div class="meta"><span>{Month} {DayOfMonth}, {Year} - {NoteCountWithLabel}</span><br>{block:HasTags}{block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp{/block:Tags}{/block:HasTags}</div><div class="meta addthis_toolbox addthis_default_style " addthis:title="{Title}" addthis:url="{Permalink}"><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a></div><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-522d3927133b7ced"></script>{/block:Date}{/block:PermalinkPage}{/block:Posts}{block:Hidden}{block:NotReblog}{block:ContentSource} {lang:Source} {SourceURL} {SourceTitle} {/block:ContentSource} {/block:NotReblog} {block:RebloggedFrom} {block:ContentSource} {lang:Source} {SourceURL} {SourceTitle} {/block:ContentSource} {ReblogParentURL}{ReblogParentName} {/block:RebloggedFrom}{/block:Hidden}
+{block:PermalinkPage}{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}{block:Date}<div class="meta"><span>{Month} {DayOfMonth}, {Year} - {NoteCountWithLabel}</span><br>{block:HasTags}{block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp{/block:Tags}{/block:HasTags}</div><div class="meta addthis_toolbox addthis_default_style " addthis:title="{Title}" addthis:url="{Permalink}"><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a></div><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-522d3927133b7ced"></script>{/block:Date}{/block:PermalinkPage}{/block:Posts}
+
+{/block:TagPage}
+
+{block:Hidden}{block:NotReblog}{block:ContentSource} {lang:Source} {SourceURL} {SourceTitle} {/block:ContentSource} {/block:NotReblog} {block:RebloggedFrom} {block:ContentSource} {lang:Source} {SourceURL} {SourceTitle} {/block:ContentSource} {ReblogParentURL}{ReblogParentName} {/block:RebloggedFrom}{/block:Hidden}
 <div id="notes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
 <div class="clear"></div>
 </div>    
 <div id="foot">
-{block:IndexPage}<div id="navigator" class="{select:Pagination}">
+{block:TagPage}<div id="navigator" class="{select:Pagination}">
     <a id="load">Load More</a>
     <div id="pagination" style="display:none;">{block:Pagination}{block:PreviousPage}<a href="{PreviousPage}" title="{lang:Newer posts}"><strong>&larr; {lang:Prev}</strong></a>{/block:PreviousPage}
                 {block:NextPage}<a class="next" href="{NextPage}" class="older" title="{lang:Older posts}"><strong>{lang:Next} &rarr;</strong></a>{/block:NextPage}{/block:Pagination}</div>
-</div>{/block:IndexPage}
+</div>{/block:TagPage}
 {block:PermalinkPage}{block:PermalinkPagination}
     <div class="permalink-page">
         {block:PreviousPost}<a href="{PreviousPost}" title="{lang:Previous post}">{lang:Previous post}</a>{/block:PreviousPost}
