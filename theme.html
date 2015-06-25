@@ -11,6 +11,8 @@
         <meta name="font:Body" content="Arial"/>
         <meta name="color:Text color" content="#000"/>
         <meta name="image:Hero" content="">
+        <meta name="text:Hero message" content="Home" />
+        <meta name="text:Hero url" content="/" />
         <meta name="if:Show Captions" content="1"/>
         <meta name="if:Photo Icons" content="1"/>
         <meta name="if:Post Icons White" content="0"/>
@@ -85,11 +87,11 @@
 <div class="hover">
 <div class="dtl">
 <div class="info">
-    <a href="/" title="Permalink">Home</a>
+  <a href="{Text:Hero url}" title="Permalink">{Text:Hero message}</a>
 </div>
 </div>
 <div class="bg"></div>
-<img class="" src="{Image:hero}" alt="" border="0"></div>
+<img class="" src="{Image:Hero}" alt="" border="0"></div>
 </div>
 {block:TagPage}-->{/block:TagPage}
 {block:PermalinkPage}-->{/block:PermalinkPage}
